@@ -4,17 +4,16 @@ namespace projectef.Models;
 
 public class Paciente
 {   
-    [Key]
+    //[Key]
     public Guid PacienteId{get;set;}
-    [ForeignKey("CategoriaId")]
+    //[ForeignKey("CategoriaId")]
     public Guid EmpleadoId{get;set;}
-    [Required]
-    [MaxLength(100)]
+    //[MaxLength(100)]
     public string Nombre {get;set;}
     public string Apellido {get;set;}
-    [Required]
+    //[Required]
     public int DocumentoPaciente {get;set;}
-    [Required]
+    //[Required]
     public DateTime FechadeIngreso {get;set;}
     public string DescripcionCaso {get;set;}
     public Prioridad PrioridadPaciente{get;set;}
