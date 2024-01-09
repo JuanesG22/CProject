@@ -18,5 +18,6 @@ public class Empleado
     public DateTime FechadeContratacion {get;set;}
     public string TipodeContrato {get;set;}
     public virtual ICollection<Paciente> Pacientes{get;set;}
+    public int ControlPacienteporDia {get; set;}
 
 }

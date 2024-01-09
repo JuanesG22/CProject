@@ -11,6 +11,7 @@ public class Paciente
     //[MaxLength(100)]
     public string Nombre {get;set;}
     public string Apellido {get;set;}
+    public int Edad {get;set;}
     //[Required]
     public int DocumentoPaciente {get;set;}
     //[Required]
