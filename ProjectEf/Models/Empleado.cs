@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace projectef.Models;
 
@@ -17,6 +18,7 @@ public class Empleado
     public string ContraseñaEmpleado {get;set;}
     public DateTime FechadeContratacion {get;set;}
     public string TipodeContrato {get;set;}
+    [JsonIgnore]
     public virtual ICollection<Paciente> Pacientes{get;set;}
     public int ControlPacienteporDia {get; set;}
 

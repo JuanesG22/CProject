@@ -17,4 +17,14 @@ app.MapGet("/dbconexion", async([FromServices] PacientesContext DbContext) =>
     return Results.Ok("Base de datos en Memoria "+ DbContext.Database.IsInMemory());
 });
 
+app.MapGet("/api/pacientes", async([FromServices] PacientesContext DbContext) =>
+{
+    return Results.Ok(DbContext.Pacientes);
+});
+
+app.MapGet("/api/pacientes/prioridadAlta", async([FromServices] PacientesContext DbContext) =>
+{
+    return Results.Ok(DbContext.Pacientes.Where(p=> p.PrioridadPaciente == projectef.Models.Prioridad.Alta));
+});
+
 app.Run();
