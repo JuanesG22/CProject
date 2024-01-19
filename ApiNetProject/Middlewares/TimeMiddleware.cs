@@ -14,8 +14,12 @@ public class TimeMiddleware
             await context.Response.WriteAsync(DateTime.Now.ToShortDateString());
         }
     }
-    public static class TimeMiddlewareExtension
-    {
-        
-    }
 }
+
+ public static class TimeMiddlewareExtension
+    {
+        public static IApplicationBuilder UseTimeMiddleware(this IApplicationBuilder builder)
+        {
+            return builder.UseMiddleware<TimeMiddleware>();
+        }
+    }
