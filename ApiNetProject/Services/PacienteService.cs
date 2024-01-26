@@ -1,7 +1,7 @@
 using webapi.Models;
 namespace webapi.Services;
 
-public class PacientesService : IPacientesServices
+public class PacientesService : IPacientesService
 {
     PacientesContext context;
 
@@ -41,7 +41,7 @@ public class PacientesService : IPacientesServices
     }
 }
 
-public interface IPacientesServices
+public interface IPacientesService
 {
     IEnumerable<Paciente> Get();
     Task Save(Paciente paciente);
